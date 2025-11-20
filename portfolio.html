@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Bernadette</title>
+  <meta name="description" content="Selected works by Bernadette." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/img/logo.png" alt="Logo" class="logo-img" onerror="this.style.display='none'">
+        <span class="brand-text">Bernadette <span class="dot">.</span></span>
+      </a>
+
+      <nav class="nav" id="main-nav" aria-label="Primary">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link active" href="portfolio.html">Portfolio</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+
+      <div class="controls">
+        <button id="theme-toggle" class="btn-icon" aria-pressed="false" aria-label="Toggle dark mode"><span id="theme-icon">🌙</span></button>
+        <button id="mobile-toggle" class="btn-icon mobile-only" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+
+    <div id="mobile-nav" class="mobile-nav" hidden>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="container section">
+      <h1 class="section-title">Selected Works</h1>
+
+      <div class="projects-grid large">
+        <article class="card project large">
+          <img src="assets/img/project1.jpg" alt="Commerce Platform Redesign" onerror="this.style.display='none'">
+          <div class="card-body">
+            <h3>Commerce Platform Redesign</h3>
+            <p class="muted">Full redesign, rapid A/B testing and optimisation.</p>
+            <a class="link" href="#">Case study →</a>
+          </div>
+        </article>
+
+        <article class="card project large">
+          <img src="assets/img/project2.jpg" alt="SaaS Dashboard" onerror="this.style.display='none'">
+          <div class="card-body">
+            <h3>SaaS Dashboard</h3>
+            <p class="muted">Data-first UX for complex analytics.</p>
+            <a class="link" href="#">Case study →</a>
+          </div>
+        </article>
+
+        <article class="card project large">
+          <img src="assets/img/project3.jpg" alt="Brand & Website" onerror="this.style.display='none'">
+          <div class="card-body">
+            <h3>Brand & Website</h3>
+            <p class="muted">Identity, website & collateral.</p>
+            <a class="link" href="#">Case study →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year-4"></span> Bernadette Brits</div>
+      <div class="footer-links">
+        <a href="contact.html">Hire me</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/theme.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Bernadette</title>
+  <meta name="description" content="Contact Bernadette for design & development work." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <!-- header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/img/logo.png" alt="Logo" class="logo-img" onerror="this.style.display='none'">
+        <span class="brand-text">Bernadette <span class="dot">.</span></span>
+      </a>
+
+      <nav class="nav" id="main-nav" aria-label="Primary">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="portfolio.html">Portfolio</a>
+        <a class="nav-link active" href="contact.html">Contact</a>
+      </nav>
+
+      <div class="controls">
+        <button id="theme-toggle" class="btn-icon" aria-pressed="false" aria-label="Toggle dark mode"><span id="theme-icon">🌙</span></button>
+        <button id="mobile-toggle" class="btn-icon mobile-only" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+
+    <div id="mobile-nav" class="mobile-nav" hidden>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="container section">
+      <h1 class="section-title">Get in touch</h1>
+
+      <div class="contact-grid">
+        <form class="card contact-form" action="#" method="POST" onsubmit="alert('Demo: wire this to your backend'); return false;">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required>
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required>
+          </label>
+
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+
+          <button class="btn primary" type="submit">Send message</button>
+        </form>
+
+        <aside class="card contact-card">
+          <h3>Contact</h3>
+          <p class="muted">Available for freelance & contract work.</p>
+          <ul class="contact-info">
+            <li>Email: <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></li>
+            <li>Location: Cape Town, South Africa</li>
+            <li>LinkedIn: <a href="#">Profile</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year-5"></span> Bernadette Brits</div>
+      <div class="footer-links">
+        <a href="portfolio.html">Portfolio</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/theme.js"></script>
+</body>
+</html>

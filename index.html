@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Bernadette - Portfolio| Home</title>
+    <meta
+      name="description"
+      content="Bernadette Brits — UI/UX & Front-end Developer specialising in eCommerce and product-design."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <img src="assets/img/logo.png" alt="Logo" class="logo-img" onerror="this.style.display='none'">
+        <span class="brand-text">Bernadette <span class="dot">.</span></span>
+      </a>
+
+      <nav class="nav" id="main-nav" aria-label="Primary">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="portfolio.html">Portfolio</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+
+      <div class="controls">
+        <button id="theme-toggle" class="btn-icon" aria-pressed="false" aria-label="Toggle dark mode">
+          <span id="theme-icon">🌙</span>
+        </button>
+
+        <button id="mobile-toggle" class="btn-icon mobile-only" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          ☰
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile nav -->
+    <div id="mobile-nav" class="mobile-nav" hidden>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+  <!-- Main -->
+  <main>
+    <!-- Hero -->
+    <section class="hero container">
+      <div class="hero-left">
+        <h1 class="hero-title">Hi — I’m <span class="accent">Bernadette</span><br> I build beautiful digital products.</h1>
+        <p class="lead">UI/UX design, front-end engineering, and eCommerce systems — professional, scalable and polished.</p>
+
+        <div class="hero-cta">
+          <a class="btn primary" href="portfolio.html">View Portfolio</a>
+          <a class="btn ghost" href="contact.html">Hire me</a>
+        </div>
+
+        <ul class="stats">
+          <li><strong>8+</strong> years</li>
+          <li><strong>50+</strong> projects</li>
+          <li><strong>100%</strong> client satisfaction</li>
+        </ul>
+      </div>
+
+      <div class="hero-right">
+        <div class="device">
+          <img src="assets/img/hero-device.png" alt="Project screenshot" onerror="this.style.display='none'">
+          <div class="glow-orb" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured -->
+    <section class="container section">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="grid projects-grid">
+        <article class="card project">
+          <img src="assets/img/project1.jpg" alt="Project 1" onerror="this.style.display='none'">
+          <div class="card-body">
+            <h3>Commerce Platform Redesign</h3>
+            <p class="muted">E-commerce • React • Conversion optimisation</p>
+            <a class="link" href="portfolio.html">View case study →</a>
+          </div>
+        </article>
+
+        <article class="card project">
+          <img src="assets/img/project2.jpg" alt="Project 2" onerror="this.style.display='none'">
+          <div class="card-body">
+            <h3>SaaS Dashboard</h3>
+            <p class="muted">UX & data visualisation</p>
+            <a class="link" href="portfolio.html">View case study →</a>
+          </div>
+        </article>
+
+        <article class="card project">
+          <img src="assets/img/project3.jpg" alt="Project 3" onerror="this.style.display='none'">
+          <div class="card-body">
+            <h3>Brand & Website</h3>
+            <p class="muted">Identity, site and marketing</p>
+            <a class="link" href="portfolio.html">View case study →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Services preview -->
+    <section class="container section">
+      <h2 class="section-title">Services</h2>
+      <div class="grid services-grid">
+        <div class="card service">
+          <h4>UI / UX Design</h4>
+          <p class="muted">Research, prototypes, design systems and polished handoff-ready assets.</p>
+        </div>
+        <div class="card service">
+          <h4>Front-end Development</h4>
+          <p class="muted">React, performance-first builds and accessible mark-up.</p>
+        </div>
+        <div class="card service">
+          <h4>E-commerce</h4>
+          <p class="muted">Shopify/WooCommerce builds, conversion flows and analytics.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="container section">
+      <h2 class="section-title">What clients say</h2>
+      <div class="grid testimonials">
+        <blockquote class="card testimonial">
+          <p>“Bernadette transformed our storefront — conversion jumped 28% in the first month.”</p>
+          <footer>— Alex M., CEO</footer>
+        </blockquote>
+
+        <blockquote class="card testimonial">
+          <p>“Excellent communication, fast delivery and beautiful design.”</p>
+          <footer>— Priya S., Product Lead</footer>
+        </blockquote>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Bernadette Brits</div>
+      <div class="footer-links">
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Hire me</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/theme.js"></script>
+  </body>
+</html>

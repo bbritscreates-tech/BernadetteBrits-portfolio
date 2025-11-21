@@ -9,6 +9,14 @@
       content="Bernadette Brits — UI/UX & Front-end Developer specialising in eCommerce and product-design."
     />
     <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        >
+    <script src="https://kit.fontawesome.com/a2e0e9d6a8.js" crossorigin="anonymous"></script>
+    <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
       rel="stylesheet"
     />
@@ -36,19 +44,17 @@
           <span id="theme-icon">🌙</span>
         </button>
 
-        <button id="mobile-toggle" class="btn-icon mobile-only" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
-          ☰
-        </button>
+      <div class="menu-toggle">
+                    <button id="mobile-menu-btn" class="btn-icon"><i class="fa-solid fa-bars"></i></button>
+                    <ul id="mobile-dropdown-menu" class="mobile-dropdown">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>  
       </div>
-    </div>
-
-    <!-- Mobile nav -->
-    <div id="mobile-nav" class="mobile-nav" hidden>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="contact.html">Contact</a>
     </div>
   </header>
   <!-- Main -->
@@ -56,7 +62,7 @@
     <!-- Hero -->
     <section class="hero container">
       <div class="hero-left">
-        <h1 class="hero-title">Hi — I’m <span class="accent">Bernadette</span><br> I build beautiful digital products.</h1>
+        <h1 class="hero-title">Hi — I’m <span class="accent">Bernadette Brits</span><br> I build beautiful digital products.</h1>
         <p class="lead">UI/UX design, front-end engineering, and eCommerce systems — professional, scalable and polished.</p>
 
         <div class="hero-cta">

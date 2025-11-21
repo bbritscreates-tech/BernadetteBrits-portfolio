@@ -150,36 +150,52 @@ body {
 
 /* --- MOBILE NAV --- */
 
-.mobile-only {
-  display: none;
+.menu-toggle i {
+  color: var(--muted) !important;
 }
 
-/* Hidden by default */
-.mobile-nav {
+.menu-toggle {
   display: none;
-  position: absolute;
-  top: 70px;
-  right: 20px;
-  background: var(--card);
-  padding: 20px;
-  border-radius: 10px;
-  width: 240px;
+  cursor: pointer;
+}
+
+.mobile-dropdown {
+  display: none;
   flex-direction: column;
-  gap: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  z-index: 9999;
+  background: var(--card);
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  z-index: 1000;
   transition: var(--transition);
 }
 
-/* When active */
-.mobile-nav.active {
+.mobile-dropdown.open {
   display: flex;
 }
 
-.mobile-nav a {
+#mobile-menu-btn i {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+  color: #fff;
+}
+
+.mobile-dropdown.open + #mobile-menu-btn i {
+  transform: rotate(90deg);
+}
+
+.menu-toggle ul {
+  list-style: none;
+}
+
+.mobile-dropdown a {
   text-decoration: none;
   color: var(--text);
-  padding: 10px 12px;
+  line-height: 2rem;
+   padding: 10px 12px;
   border-radius: 8px;
   transition: background .2s;
 }
@@ -422,4 +438,14 @@ textarea:focus {
 /* Small helpers */
 .container .section-title+.grid {
   margin-top: 6px;
+}
+
+@media (max-width: 480px) {
+  .nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }

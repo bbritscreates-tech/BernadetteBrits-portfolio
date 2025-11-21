@@ -32,31 +32,25 @@
 
   /* -------------------- MOBILE NAV -------------------- */
 
-  if (mobileToggle && mobileNav) {
-    mobileToggle.addEventListener('click', () => {
-      mobileNav.classList.toggle('active');
-      mobileToggle.setAttribute(
-        'aria-expanded',
-        mobileNav.classList.contains('active')
-      );
-    });
+  document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.getElementById("mobile-menu-btn");
+  const dropdown = document.getElementById("mobile-dropdown-menu");
+  const icon = menuBtn.querySelector("i");
 
-    /* Close when clicking a link */
-    mobileNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileNav.classList.remove('active');
-        mobileToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
+  menuBtn.addEventListener("click", () => {
+    dropdown.classList.toggle("open");
 
-    /* Close on escape */
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        mobileNav.classList.remove('active');
-        mobileToggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-  }
+    // Toggle icon between hamburger and X
+    if (dropdown.classList.contains("open")) {
+      icon.classList.remove("fa-bars");
+      icon.classList.add("fa-xmark");
+    } else {
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
+    }
+  });
+});
+
 
   /* -------------------- FOOTER YEARS -------------------- */
   const year = new Date().getFullYear();

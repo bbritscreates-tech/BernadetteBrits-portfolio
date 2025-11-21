@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -8,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
   <!-- Header copied from index -->
   <header class="site-header" id="site-header">
@@ -29,18 +31,19 @@
         <button id="theme-toggle" class="btn-icon" aria-pressed="false" aria-label="Toggle dark mode">
           <span id="theme-icon">🌙</span>
         </button>
-        <button id="mobile-toggle" class="btn-icon mobile-only" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
-          ☰
-        </button>
       </div>
     </div>
 
-    <div id="mobile-nav" class="mobile-nav" hidden>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="contact.html">Contact</a>
+    <div class="menu-toggle">
+      <button id="mobile-menu-btn" class="btn-icon"><i class="fa-solid fa-bars"></i></button>
+      <ul id="mobile-dropdown-menu" class="mobile-dropdown">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
     </div>
   </header>
 
@@ -51,7 +54,8 @@
           <img src="assets/img/avatar.jpg" alt="Bernadette" class="avatar" onerror="this.style.display='none'">
           <h1>About me</h1>
           <p class="lead">I combine product thinking with polished interfaces to help brands scale online.</p>
-          <p>I work across design systems, front-end engineering and e-commerce — with a focus on measurable results and clarity of experience.</p>
+          <p>I work across design systems, front-end engineering and e-commerce — with a focus on measurable results and
+            clarity of experience.</p>
         </div>
 
         <aside class="card skills">
@@ -85,5 +89,5 @@
 
   <script src="assets/js/theme.js"></script>
 </body>
-</html>
 
+</html>

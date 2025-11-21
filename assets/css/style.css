@@ -305,7 +305,9 @@ body {
 
 /* Cards / grids */
 .projects-grid {
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
 .card {
@@ -341,9 +343,18 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
+.service {
+  padding: 0 20px;
+}
+
 /* Testimonials */
 .testimonials {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.testimonial {
+  padding: 0 20px;
+  padding-bottom: 18px;
 }
 
 /* About layout and forms */
@@ -352,6 +363,16 @@ body {
   grid-template-columns: 1fr 320px;
   gap: 24px;
   align-items: start;
+}
+
+.about-card {
+  padding: 0 20px;
+  padding-bottom: 18px;
+}
+
+.skills {
+  padding: 0 20px;
+  padding-bottom: 18px;
 }
 
 .avatar {
@@ -371,13 +392,17 @@ body {
 }
 
 /* Forms */
+.contact-form {
+  padding: 20px 20px;
+}
+
 .contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 12px;
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.06);
-  background: transparent;
+  background: var(--muted);
   color: var(--text);
   margin-top: 8px;
 }
@@ -387,6 +412,10 @@ body {
   margin-bottom: 12px;
   color: var(--muted);
   font-weight: 600;
+}
+
+.contact-card {
+  padding: 0 20px;
 }
 
 /* Footer */
@@ -414,6 +443,7 @@ body {
 .accent {
   color: var(--accent);
 }
+
 
 /* Micro-interactions */
 .card.project:hover img {
@@ -447,5 +477,18 @@ textarea:focus {
 
   .menu-toggle {
     display: block;
+  }
+}
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

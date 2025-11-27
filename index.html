@@ -1,29 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Bernadette - Portfolio| Home</title>
-    <meta
-      name="description"
-      content="Bernadette Brits — UI/UX & Front-end Developer specialising in eCommerce and product-design."
-    />
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        >
-    <script src="https://kit.fontawesome.com/a2e0e9d6a8.js" crossorigin="anonymous"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body>
-    <!-- Header -->
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bernadette - Portfolio| Home</title>
+  <meta name="description"
+    content="Bernadette Brits — UI/UX & Front-end Developer specialising in eCommerce and product-design." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <script src="https://kit.fontawesome.com/a2e0e9d6a8.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!-- Header -->
   <header class="site-header" id="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Home">
@@ -44,16 +37,16 @@
           <span id="theme-icon">🌙</span>
         </button>
 
-      <div class="menu-toggle">
-                    <button id="mobile-menu-btn" class="btn-icon"><i class="fa-solid fa-bars"></i></button>
-                    <ul id="mobile-dropdown-menu" class="mobile-dropdown">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>  
+        <div class="menu-toggle">
+          <button id="mobile-menu-btn" class="btn-icon"><i class="fa-solid fa-bars"></i></button>
+          <ul id="mobile-dropdown-menu" class="mobile-dropdown">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </header>
@@ -62,8 +55,10 @@
     <!-- Hero -->
     <section class="hero container">
       <div class="hero-left">
-        <h1 class="hero-title">Hi — I’m <span class="accent">Bernadette Brits</span><br> I build beautiful digital products.</h1>
-        <p class="lead">UI/UX design, front-end engineering, and eCommerce systems — professional, scalable and polished.</p>
+        <h1 class="hero-title">Hi — I’m <span class="accent">Bernadette Brits</span><br> I build beautiful digital
+          products.</h1>
+        <p class="lead">UI/UX design, front-end engineering, and eCommerce systems — professional, scalable and
+          polished.</p>
 
         <div class="hero-cta">
           <a class="btn primary" href="portfolio.html">View Portfolio</a>
@@ -78,10 +73,12 @@
       </div>
 
       <div class="hero-right">
-        <div class="device">
-          <img src="assets/img/hero-device.png" alt="Project screenshot" onerror="this.style.display='none'">
-          <div class="glow-orb" aria-hidden="true"></div>
+        <div class="hero-background">
+          <div class="blob blob1"></div>
+          <div class="blob blob2"></div>
+          <div class="blob blob3"></div>
         </div>
+
       </div>
     </section>
 
@@ -166,5 +163,33 @@
   </footer>
 
   <script src="assets/js/theme.js"></script>
-  </body>
+
+  <script>
+function floatBlobs() {
+  const blobs = document.querySelectorAll('.blob');
+
+  blobs.forEach(blob => {
+    // Random position within container range
+    const x = (Math.random() * 60) - 30;   // drift left/right
+    const y = (Math.random() * 60) - 30;   // drift up/down
+    const scale = 0.8 + Math.random() * 0.6; // slight size variance
+    const rotate = Math.random() * 40 - 20;
+
+    blob.style.transform = `
+      translate(${x}px, ${y}px)
+      scale(${scale})
+      rotate(${rotate}deg)
+    `;
+  });
+}
+
+// Move blobs every 3 seconds
+setInterval(floatBlobs, 3000);
+
+// Initial movement
+floatBlobs();
+</script>
+
+</body>
+
 </html>

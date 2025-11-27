@@ -266,32 +266,74 @@ body {
   color: var(--text);
 }
 
-/* Device mock */
-.device {
-  position: relative;
-  max-width: 420px;
-  margin: 0 auto;
-}
-
-.device img {
-  width: 100%;
-  border-radius: 14px;
-  display: block;
-  box-shadow: var(--shadow);
-}
-
-.glow-orb {
+.hero-background {
   position: absolute;
-  right: -36px;
-  top: -36px;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: linear-gradient(45deg, var(--accent), var(--neon));
-  filter: blur(18px);
-  opacity: 0.85;
-  pointer-events: none
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
 }
+
+/* More defined blob style */
+.blob {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;          
+  filter: blur(20px);      /* drastically reduced blur */
+  mix-blend-mode: screen;
+  right: 0;
+  transform: translateX(-160px); /* moved more left */
+}
+
+/* Stronger visible center with soft edge */
+.blob1 {
+  background: radial-gradient(circle,
+    var(--accent) 0%,
+    rgba(255,255,255,0.15) 40%,
+    rgba(0,0,0,0) 75%
+  );
+  top: 15%;
+  animation: blobMove1 8s infinite ease-in-out;
+}
+
+.blob2 {
+  background: radial-gradient(circle,
+    var(--neon) 0%,
+    rgba(255,255,255,0.18) 40%,
+    rgba(0,0,0,0) 75%
+  );
+  top: 42%;
+  animation: blobMove2 12s infinite ease-in-out;
+}
+
+.blob3 {
+  background: radial-gradient(circle,
+    var(--muted) 0%,
+    rgba(255,255,255,0.12) 40%,
+    rgba(0,0,0,0) 75%
+  );
+  top: 70%;
+  animation: blobMove3 16s infinite ease-in-out;
+}
+
+@keyframes blobMove1 {
+  0%   { transform: translate(-160px, 0)  scale(1.1); }
+  50%  { transform: translate(-240px, 40px) scale(1.35); }
+  100% { transform: translate(-160px, 0)  scale(1.1); }
+}
+
+@keyframes blobMove2 {
+  0%   { transform: translate(-160px, 0)  scale(1); }
+  50%  { transform: translate(-260px, -50px) scale(1.25); }
+  100% { transform: translate(-160px, 0)  scale(1); }
+}
+
+@keyframes blobMove3 {
+  0%   { transform: translate(-160px, 0)  scale(0.9); }
+  50%  { transform: translate(-220px, 70px) scale(1.2); }
+  100% { transform: translate(-160px, 0)  scale(0.9); }
+}
+
 
 /* Sections */
 .section {
